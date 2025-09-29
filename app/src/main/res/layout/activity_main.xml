@@ -9,30 +9,51 @@
 
     <TextView
         android:id="@+id/tvUsuario"
-        android:text="Usuário"
-        android:textColor="#E58C00"
-        android:textStyle="bold"
-        android:textSize="20sp"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginBottom="12dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="48dp"
+        android:text="Usuário"
+        android:textColor="#E58C00"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
         tools:ignore="MissingConstraints" />
 
-    <ImageView
-        android:id="@+id/imgProfile"
-        android:layout_width="120dp"
-        android:layout_height="120dp"
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:src="@drawable/ic_editprofile"
+        android:id="@+id/Editar"
+        android:layout_width="58dp"
+        android:layout_height="58dp"
         android:layout_gravity="center_horizontal"
-        android:layout_marginEnd="136dp"
-        android:layout_marginBottom="456dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/circle_shape"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/imgProfile"
+        android:layout_width="155dp"
+        android:layout_height="155dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="19dp"
+
+        android:layout_marginBottom="61dp"
         android:background="@drawable/circle_shape"
         android:scaleType="centerCrop"
-        android:src="@drawable/perfil"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        android:src="@drawable/mamae"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvUsuario"
+        app:layout_constraintVertical_bias="0.0" />
 
     <LinearLayout
+        android:id="@+id/linearLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
@@ -49,7 +70,7 @@
             android:layout_marginBottom="4dp"
             android:text="Nome"
             android:textColor="#222222"
-            android:textSize="12sp"
+            android:textSize="16sp"
             android:textStyle="bold" />
 
         <TextView
@@ -59,7 +80,7 @@
             android:layout_marginBottom="12dp"
             android:text="Taylor Alisson Swift"
             android:textColor="#000000"
-            android:textSize="16sp"
+            android:textSize="20sp"
             android:textStyle="bold" />
 
         <TextView
@@ -68,7 +89,7 @@
             android:layout_marginBottom="4dp"
             android:text="E-mail"
             android:textColor="#222222"
-            android:textSize="12sp"
+            android:textSize="16sp"
             android:textStyle="bold" />
 
         <TextView
@@ -77,9 +98,70 @@
             android:layout_height="wrap_content"
             android:text="Olivia13@gmail.com"
             android:textColor="#000000"
-            android:textSize="16sp"
+            android:textSize="20sp"
             android:textStyle="bold" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="22dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Meus restaurantes:"
+            android:textSize="18dp"
+            />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="3">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/ic_cantina"
+                android:layout_width="0dp"
+                android:layout_height="96dp"
+                android:layout_gravity="center_horizontal"
+                android:scaleType="centerCrop"
+                android:src="@drawable/cantinadasonia"
+                android:layout_weight="1"
+                tools:layout_editor_absoluteX="112dp"
+                tools:layout_editor_absoluteY="472dp" />
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/ic_cigarrete"
+                android:layout_width="0dp"
+                android:layout_height="96dp"
+                android:layout_gravity="center_horizontal"
+                android:scaleType="centerCrop"
+                android:src="@drawable/cigarreteburguer"
+                android:layout_weight="1"
+                tools:layout_editor_absoluteX="112dp"
+                tools:layout_editor_absoluteY="472dp" />
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/ic_sweet"
+                android:layout_width="0dp"
+                android:layout_height="96dp"
+                android:layout_gravity="center_horizontal"
+                android:scaleType="centerCrop"
+                android:src="@drawable/sweetcake"
+                android:layout_weight="1"
+                tools:layout_editor_absoluteX="112dp"
+                tools:layout_editor_absoluteY="472dp" />
+
+        </LinearLayout>
 
     </LinearLayout>
+
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
